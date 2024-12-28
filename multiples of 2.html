@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiples of 2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input, button {
+            padding: 10px;
+            margin: 5px;
+            font-size: 16px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Print Multiples of 2</h1>
+    <form onsubmit="return false;">
+        <input type="number" id="count" placeholder="Enter number of multiples" required>
+        <button onclick="printMultiples()">Print</button>
+    </form>
+    <ul id="result"></ul>
+
+    <script>
+        function printMultiples() {
+            // Get the count from the input field
+            const count = parseInt(document.getElementById('count').value);
+
+            // Validate the input
+            if (isNaN(count) || count <= 0) {
+                alert('Please enter a positive integer.');
+                return;
+            }
+
+            // Clear previous results
+            const resultList = document.getElementById('result');
+            resultList.innerHTML = '';
+
+            // Generate and display the multiples of 2
+            for (let i = 1; i <= count; i++) {
+                const multiple = 2 * i;
+                const listItem = document.createElement('li');
+                listItem.textContent = 2 x ${i} = ${multiple};
+                resultList.appendChild(listItem);
+            }
+        }
+    </script>
+</body>
+</html>

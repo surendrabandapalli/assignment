@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script type="text/javascript">
+document.writeln("i am DINESH and this is my javascript class")
+    </script>
+</head>
+<body>
+<center><h1>Js Intro</h1></center>
+<div id="pg"></div>
+<script type="text/javascript">
+        document.write("i am coming from script in body")
+        document.getElementById('pg').innerHTML="<mark>i am displayed in div tag by changing its content using inner html</mark>"
+</script>
+<script src="external.js"></script>
+</body>
+</html>
+ 
+
+
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="orange">
+      <center><h1>Variables in js</h1></center>
+<script>
+   var globalVariable=513;
+   document.write("i am global calling out from function:"+globalVariable+"<br>");
+    function show() 
+        {
+            var localVariable=511;
+            document.write("i am local calling  in from function:"+localVariable+"<br>");
+            document.write("i am global calling in from function:"+globalVariable+"<br>");
+        }
+         show(); 
+         document.write("i am local calling  out from function:"+localVariable+"<br>"); 
+</script>
+</body>
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="light red">
+<script>
+var a=10;
+document.write(a+" "+"type is:"+typeof(a)+"<br><br><br>");
+       a=10.37;
+       document.write(a+" "+"type is:"+typeof(a)+"<br><br><br>");
+       a="hi charan"; 
+       document.write(a+" "+"type is:"+typeof(a)+"<br><br><br>");
+       a='m';
+       document.write(a+" "+"type is:"+typeof(a)+"<br><br><br>");
+       a=true;
+       document.write(a+" "+"type is:"+typeof(a)+"<br><br><br>");
+       const array=[1,2,"jio "]; 
+       document.write(array+" "+"type is:"+typeof(array)+"<br><br><br>");
+       const obj={             
+            "id":1,
+            "name":"Amrutha pavani"
+        }
+       document.write(obj+" "+"type is:"+typeof(obj)+"<br><br><br>");
+    </script>
+</body>
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typecasting in JavaScript</title>
+</head>
+<body bgcolor="lightblue">
+<h2>Typecasting in JavaScript</h2>
+    <script>
+        var num = 42;
+        var numToString = String(num);
+        document.write("Original value: " + num + " | Type: " + typeof(num) + "<br>");
+        document.write("After typecasting to String: " + numToString + " | Type: " + typeof(numToString) + "<br><br>");
+        var str = "123";
+        var strToInt = Number(str);
+        document.write("Original value: " + str + " | Type: " + typeof(str) + "<br>");
+        document.write("After typecasting to Number: " + strToInt + " | Type: " + typeof(strToInt) + "<br><br>");
+        var bool = true;
+        var boolToString = String(bool);
+        document.write("Original value: " + bool + " | Type: " + typeof(bool) + "<br>");
+        document.write("After typecasting to String: " + boolToString + " | Type: " + typeof(boolToString) + "<br><br>");
+        var strBool = "true";
+        var strToBool = (strBool === "true"); 
+        document.write("Original value: " + strBool + " | Type: " + typeof(strBool) + "<br>");
+        document.write("After typecasting to Boolean: " + strToBool + " | Type: " + typeof(strToBool) + "<br><br>");
+        var floatNum = 3.14;
+        var floatToInt = parseInt(floatNum);
+        document.write("Original value: " + floatNum + " | Type: " + typeof(floatNum) + "<br>");
+        document.write("After typecasting to Integer: " + floatToInt + " | Type: " + typeof(floatToInt) + "<br><br>");
+        var intNum = 5;
+        var intToFloat = parseFloat(intNum);
+        document.write("Original value: " + intNum + " | Type: " + typeof(intNum) + "<br>");
+        document.write("After typecasting to Float: " + intToFloat + " | Type: " + typeof(intToFloat) + "<br><br>");
+    </script>
+</body>
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators in JavaScript</title>
+</head>
+<body bgcolor="pink">
+    <h2>Operators in JavaScript</h2>
+    <script>
+        var a = 10, b = 3;
+        document.write("Arithmetic Operators:<br>");
+        document.write("Addition (a + b): " + (a + b) + "<br>");
+        document.write("Subtraction (a - b): " + (a - b) + "<br>");
+        document.write("Multiplication (a * b): " + (a * b) + "<br>");
+        document.write("Division (a / b): " + (a / b) + "<br>");
+        document.write("Modulus (a % b): " + (a % b) + "<br><br>");
+        var c = 5;
+        document.write("Assignment Operators:<br>");
+        c += 3; 
+        document.write("c += 3: " + c + "<br>");
+        c -= 2; 
+        document.write("c -= 2: " + c + "<br>");
+        c *= 4;
+        document.write("c *= 4: " + c + "<br>");
+        c /= 2; 
+        document.write("c /= 2: " + c + "<br><br>");
+        var x = 7, y = "7";
+        document.write("Comparison Operators:<br>");
+        document.write("x == y: " + (x == y) + " (Equality without type check)<br>");
+        document.write("x === y: " + (x === y) + " (Equality with type check)<br>");
+        document.write("x != y: " + (x != y) + " (Inequality without type check)<br>");
+        document.write("x !== y: " + (x !== y) + " (Inequality with type check)<br>");
+        document.write("x > y: " + (x > y) + "<br>");
+        document.write("x <= y: " + (x <= y) + "<br><br>");
+        var p = true, q = false;
+        document.write("Logical Operators:<br>");
+        document.write("p && q: " + (p && q) + " (AND)<br>");
+        document.write("p || q: " + (p || q) + " (OR)<br>");
+        document.write("!p: " + (!p) + " (NOT)<br><br>");
+        var count = 5;
+        document.write("Increment/Decrement Operators:<br>");
+        document.write("count: " + count + "<br>");
+        document.write("count++: " + (count++) + " (Post-increment)<br>");
+        document.write("After count++: " + count + "<br>");
+        document.write("++count: " + (++count) + " (Pre-increment)<br>");
+        document.write("count--: " + (count--) + " (Post-decrement)<br>");
+        document.write("After count--: " + count + "<br>");
+        document.write("--count: " + (--count) + " (Pre-decrement)<br><br>");
+        var age=20;
+        var isAdult=(age>=18)?"Yes":"No";
+        document.write("Conditional (Ternary) Operator:<br>");
+        document.write("Is age>=18? " + isAdult + "<br>");
+    </script>
+</body>
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Statements in JavaScript</title>
+</head>
+<body bgcolor="green">
+    <h2>Control Statements in JavaScript</h2>
+    <script>
+        document.write("<b>Conditional Statements:</b><br>");
+         var age=20;
+        if (age<18) {
+            document.write("You are not eligible for voting.<br>");
+        } else if (age>=18 && age<60) {
+            document.write("You are eligible.<br>");
+        } else {
+            document.write("You are a senior citizen.<br>");
+        }
+        var day=3;
+        document.write("<br>Using switch statement:<br>");
+        switch (day) {
+            case 1:
+                document.write("Monday<br>");
+                break;
+            case 2:
+                document.write("Tuesday<br>");
+                break;
+            case 3:
+                document.write("Wednesday<br>");
+                break;
+            default:
+                document.write("Invalid day<br>");
+        }
+        document.write("<hr>");
+        document.write("<b>Looping Statements:</b><br>");
+        document.write("For loop: ");
+        for (var i=1; i<=5; i++) {
+            document.write(i+ " ");
+        }
+        document.write("<br>");
+        document.write("While loop: ");
+        var j=1;
+        while (j<=5) {
+            document.write(j+ " ");
+            j++;
+        }
+        document.write("<br>")
+        document.write("Do-while loop: ");
+        var k=1;
+        do {
+            document.write(k + " ");
+            k++;
+        } while (k<=5);
+        document.write("<br><hr>");
+        document.write("<b>Break and Continue:</b><br>");
+        document.write("Break example (Stop at 3): ");
+        for (var x=1; x<=5; x++) {
+            if (x===3) {
+                break;
+            }
+            document.write(x+ " ");
+        }
+        document.write("<br>");
+         document.write("Continue example (Skip 3): ");
+        for (var y=1; y<=5; y++) {
+            if (y==3) {
+                continue;
+            }
+            document.write(y+" ");
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="white">
+    <script>
+      for(i=1;i<=20;i++)
+    {
+        document.write(20+" x "+" "+i+" ="+(20*i)+"<br><br>");
+    }
+    </script>
+</body>
+</html>
